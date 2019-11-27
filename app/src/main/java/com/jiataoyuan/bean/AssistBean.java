@@ -3,8 +3,8 @@ package com.jiataoyuan.bean;
 import java.io.Serializable;
 
 /**
- * @author benjaminwan
- *用于保存界面数据
+ *	用于保存界面数据
+ *  @author TaoYuan
  */
 public class AssistBean implements Serializable {
 	private static final long serialVersionUID = -5620661009186692227L;

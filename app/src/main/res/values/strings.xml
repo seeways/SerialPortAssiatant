@@ -11,4 +11,5 @@
     <string name="_500">500</string>
     <string name="ms">ms</string>
     <string name="auto">AUTO</string>
+    <string name="auto_clear_hint">500行自动清除</string>
 </resources>

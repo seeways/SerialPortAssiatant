@@ -11,8 +11,8 @@ import java.security.InvalidParameterException;
 
 
 /**
- * @author benjaminwan
  * 串口辅助工具类
+ * @author TaoYuan
  */
 public abstract class SerialHelper {
     private SerialPort mSerialPort;

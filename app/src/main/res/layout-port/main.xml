@@ -76,10 +76,7 @@
                 android:inputType="number|none"
                 android:longClickable="false"
                 android:text="@string/zero"
-                tools:ignore="LabelFor">
-
-                <requestFocus />
-            </EditText>
+                tools:ignore="LabelFor" />
 
 
             <CheckBox
@@ -88,6 +85,12 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="@string/auto_clear" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/auto_clear_hint" />
 
         </LinearLayout>
 

@@ -1,8 +1,8 @@
 package com.jiataoyuan.serialportassistant;
 
 /**
- * @author benjaminwan
  * 数据转换工具
+ * @author TaoYuan
  */
 class MyFunc {
     //-------------------------------------------------------

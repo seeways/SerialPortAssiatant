@@ -3,8 +3,8 @@ package com.jiataoyuan.bean;
 import java.text.SimpleDateFormat;
 
 /**
- * @author benjaminwan
- *串口数据
+ *	串口数据
+ *	@author TaoYuan
  */
 public class ComBean {
 		public byte[] bRec=null;

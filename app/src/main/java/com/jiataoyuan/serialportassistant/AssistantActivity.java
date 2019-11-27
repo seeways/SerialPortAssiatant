@@ -48,13 +48,14 @@ import java.util.Queue;
 /**
  * serialport api和jni取自http://code.google.com/p/android-serialport-api/
  *
- * @author benjaminwan
  * 串口助手，支持双串口同时读写
  * 程序载入时自动搜索串口设备
  * n,8,1，没得选
+ *
+ * @author TaoYuan
  */
-public class ComAssistantActivity extends Activity {
-    EditText editTextRecDisp, editTextLines, editTextCOMA, editTextCOMB;
+public class AssistantActivity extends Activity {
+    EditText editTextRecDisp,editTextLines, editTextCOMA, editTextCOMB;
     EditText editTextTimeCOMA, editTextTimeCOMB;
     CheckBox checkBoxAutoClear, checkBoxAutoCOMA, checkBoxAutoCOMB;
     Button ButtonClear, ButtonSendCOMA, ButtonSendCOMB;
@@ -105,9 +106,8 @@ public class ComAssistantActivity extends Activity {
     private void setControls() {
         String appName = getString(R.string.app_name);
         try {
-            PackageInfo pinfo = getPackageManager().getPackageInfo("com.bjw.ComAssistant", PackageManager.GET_CONFIGURATIONS);
+            PackageInfo pinfo = getPackageManager().getPackageInfo("com.jiataoyuan.serialportassiatant", PackageManager.GET_CONFIGURATIONS);
             String versionName = pinfo.versionName;
-//			String versionCode = String.valueOf(pinfo.versionCode);
             setTitle(appName + " V" + versionName);
         } catch (NameNotFoundException e) {
             e.printStackTrace();
@@ -311,6 +311,8 @@ public class ComAssistantActivity extends Activity {
         public void onClick(View v) {
             if (v == ButtonClear) {
                 editTextRecDisp.setText("");
+                editTextLines.setText("0");
+                iRecLines = 0;
             } else if (v == ButtonSendCOMA) {
                 sendPortData(ComA, editTextCOMA.getText().toString());
             } else if (v == ButtonSendCOMB) {
@@ -439,7 +441,7 @@ public class ComAssistantActivity extends Activity {
         AssistData.sTimeA = editTextTimeCOMA.getText().toString();
         AssistData.sTimeB = editTextTimeCOMB.getText().toString();
 
-        SharedPreferences msharedPreferences = getSharedPreferences("ComAssistant", Context.MODE_PRIVATE);
+        SharedPreferences msharedPreferences = getSharedPreferences("SerialPortAssistant", Context.MODE_PRIVATE);
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -456,7 +458,7 @@ public class ComAssistantActivity extends Activity {
 
     //----------------------------------------------------
     private AssistBean getAssistData() {
-        SharedPreferences msharedPreferences = getSharedPreferences("ComAssistant", Context.MODE_PRIVATE);
+        SharedPreferences msharedPreferences = getSharedPreferences("SerialPortAssistant", Context.MODE_PRIVATE);
         AssistBean AssistData = new AssistBean();
         try {
             String personBase64 = msharedPreferences.getString("AssistData", "");
