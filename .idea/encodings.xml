@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/cpp/CMakeLists.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/cpp/SerialPort.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/cpp/SerialPort.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jiataoyuan/bean/AssistBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jiataoyuan/bean/ComBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jiataoyuan/serialport/SerialPortFinder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jiataoyuan/serialportassistant/ComAssistantActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jiataoyuan/serialportassistant/MyFunc.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jiataoyuan/serialportassistant/SerialHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout-land" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout-port" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/values/baudrates.xml" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
