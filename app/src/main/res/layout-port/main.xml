@@ -12,6 +12,7 @@
         android:id="@+id/LinearLayoutRecDisp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="2dp"
         android:layout_weight="2"
         android:weightSum="4">
 
@@ -20,6 +21,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@drawable/background_border_curve"
             android:clickable="false"
             android:gravity="top"
             android:importantForAutofill="no"
@@ -102,8 +104,10 @@
             android:id="@+id/LinearLayoutCOMA"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="2dp"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:weightSum="3"
             tools:ignore="NestedWeights">
 
 
@@ -112,31 +116,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/background_border_curve"
                 android:gravity="top"
                 android:imeOptions="actionDone"
-                android:singleLine="true"
-                android:inputType="text"
                 android:importantForAutofill="no"
+                android:inputType="text"
+                android:singleLine="true"
                 tools:ignore="LabelFor" />
 
 
             <LinearLayout
                 android:id="@+id/LinearLayoutTooLCOMA"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="2"
+                android:background="@drawable/background_border_rectangle"
                 android:orientation="vertical">
 
 
                 <Spinner
                     android:id="@+id/SpinnerCOMA"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption1COMA"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <Spinner
@@ -153,11 +167,16 @@
 
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption2COMA"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <EditText
@@ -165,9 +184,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:importantForAutofill="no"
                         android:inputType="number"
                         android:text="@string/_500"
-                        android:importantForAutofill="no"
                         tools:ignore="LabelFor" />
 
                     <TextView
@@ -184,10 +203,10 @@
 
                     <Button
                         android:id="@+id/ButtonSendCOMA"
-                        android:minWidth="0dp"
-                        android:minHeight="0dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
                         android:text="@string/send" />
 
                 </LinearLayout>
@@ -201,8 +220,10 @@
             android:id="@+id/LinearLayoutCOMB"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="2dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="3">
 
 
             <EditText
@@ -210,31 +231,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/background_border_curve"
                 android:gravity="top"
                 android:imeOptions="actionDone"
-                android:singleLine="true"
-                android:inputType="text"
                 android:importantForAutofill="no"
+                android:inputType="text"
+                android:singleLine="true"
                 tools:ignore="LabelFor" />
 
 
             <LinearLayout
                 android:id="@+id/LinearLayoutTooLCOMB"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="2"
+                android:background="@drawable/background_border_rectangle"
                 android:orientation="vertical">
-
 
                 <Spinner
                     android:id="@+id/SpinnerCOMB"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:ignore="NestedWeights" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption1COMB"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <Spinner
@@ -251,11 +282,16 @@
 
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption2COMB"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <EditText
@@ -263,9 +299,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:importantForAutofill="no"
                         android:inputType="number"
                         android:text="@string/_500"
-                        android:importantForAutofill="no"
                         tools:ignore="LabelFor" />
 
                     <TextView

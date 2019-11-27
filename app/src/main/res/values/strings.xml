@@ -6,8 +6,8 @@
     <string name="auto_clear">AUTO CLEAR</string>
     <string name="zero">0</string>
     <string name="send">SNED</string>
-    <string name="auto_send">AUTO SEND</string>
     <string name="off">OFF</string>
+    <string name="on">ON</string>
     <string name="_500">500</string>
     <string name="ms">ms</string>
     <string name="auto">AUTO</string>

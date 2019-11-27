@@ -62,7 +62,7 @@ public class ComAssistantActivity extends Activity {
     Spinner SpinnerCOMA, SpinnerCOMB;
     Spinner SpinnerBaudRateCOMA, SpinnerBaudRateCOMB;
     RadioButton radioButtonTxt, radioButtonHex;
-    SerialControl ComA, ComB;//4个串口
+    SerialControl ComA, ComB;//2个串口
     DispQueueThread DispQueue;//刷新显示线程
     SerialPortFinder mSerialPortFinder;//串口设备搜索
     AssistBean AssistData;//用于界面数据序列化和反序列化

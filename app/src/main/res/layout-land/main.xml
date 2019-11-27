@@ -10,6 +10,7 @@
         android:id="@+id/LinearLayoutRecDisp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="2dp"
         android:layout_weight="1"
         android:baselineAligned="false"
         android:weightSum="6">
@@ -19,11 +20,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
+            android:background="@drawable/background_border_curve"
             android:clickable="false"
             android:gravity="top"
             android:importantForAutofill="no"
             android:inputType="none"
             android:longClickable="false"
+            android:padding="3dp"
             android:textSize="14sp"
             tools:ignore="LabelFor,NestedWeights" />
 
@@ -104,8 +107,10 @@
             android:id="@+id/LinearLayoutCOMA"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="2dp"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:weightSum="3"
             tools:ignore="NestedWeights">
 
 
@@ -114,31 +119,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/background_border_curve"
                 android:gravity="top"
                 android:imeOptions="actionDone"
-                android:singleLine="true"
-                android:inputType="text"
                 android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="3dp"
+                android:singleLine="true"
                 tools:ignore="LabelFor" />
 
 
             <LinearLayout
                 android:id="@+id/LinearLayoutTooLCOMA"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
+                android:layout_height="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="2"
+                android:background="@drawable/background_border_rectangle"
+                android:orientation="vertical"
+                android:weightSum="3">
 
                 <Spinner
                     android:id="@+id/SpinnerCOMA"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption1COMA"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <Spinner
@@ -150,16 +166,20 @@
                     <ToggleButton
                         android:id="@+id/toggleButtonCOMA"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/off" />
+                        android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption2COMA"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <EditText
@@ -167,9 +187,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:importantForAutofill="no"
                         android:inputType="number"
                         android:text="@string/_500"
-                        android:importantForAutofill="no"
                         tools:ignore="LabelFor" />
 
                     <TextView
@@ -182,8 +202,7 @@
                         android:id="@+id/checkBoxAutoCOMA"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/auto_send" />
-
+                        android:text="@string/auto" />
 
                     <Button
                         android:id="@+id/ButtonSendCOMA"
@@ -201,8 +220,10 @@
             android:id="@+id/LinearLayoutCOMB"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
+            android:layout_margin="2dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="3">
 
 
             <EditText
@@ -210,31 +231,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/background_border_curve"
                 android:gravity="top"
                 android:imeOptions="actionDone"
-                android:singleLine="true"
-                android:inputType="text"
                 android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="3dp"
+                android:singleLine="true"
                 tools:ignore="LabelFor" />
-
 
             <LinearLayout
                 android:id="@+id/LinearLayoutTooLCOMB"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="2"
+                android:background="@drawable/background_border_rectangle"
+                android:orientation="vertical"
+                android:weightSum="3">
 
 
                 <Spinner
                     android:id="@+id/SpinnerCOMB"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:ignore="NestedWeights" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption1COMB"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <Spinner
@@ -246,16 +279,20 @@
                     <ToggleButton
                         android:id="@+id/ToggleButtonCOMB"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/off" />
+                        android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutOption2COMB"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
 
                     <EditText
@@ -263,9 +300,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:importantForAutofill="no"
                         android:inputType="number"
                         android:text="@string/_500"
-                        android:importantForAutofill="no"
                         tools:ignore="LabelFor" />
 
                     <TextView
@@ -278,8 +315,7 @@
                         android:id="@+id/checkBoxAutoCOMB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/auto_send" />
-
+                        android:text="@string/auto" />
 
                     <Button
                         android:id="@+id/ButtonSendCOMB"
