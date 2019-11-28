@@ -47,7 +47,7 @@ import java.util.Queue;
 
 /**
  * serialport api和jni取自http://code.google.com/p/android-serialport-api/
- *
+ * <p>
  * 串口助手，支持双串口同时读写
  * 程序载入时自动搜索串口设备
  * n,8,1，没得选
@@ -55,7 +55,7 @@ import java.util.Queue;
  * @author TaoYuan
  */
 public class AssistantActivity extends Activity {
-    EditText editTextRecDisp,editTextLines, editTextCOMA, editTextCOMB;
+    EditText editTextRecDisp, editTextLines, editTextCOMA, editTextCOMB;
     EditText editTextTimeCOMA, editTextTimeCOMB;
     CheckBox checkBoxAutoClear, checkBoxAutoCOMA, checkBoxAutoCOMB;
     Button ButtonClear, ButtonSendCOMA, ButtonSendCOMB;
@@ -330,7 +330,6 @@ public class AssistantActivity extends Activity {
                         ShowMessage("串口" + SpinnerCOMA.getSelectedItem().toString() + "已打开");
                         buttonView.setChecked(false);
                     } else {
-//						ComA=new SerialControl("/dev/s3c2410_serial0", "9600");
                         ComA.setPort(SpinnerCOMA.getSelectedItem().toString());
                         ComA.setBaudRate(SpinnerBaudRateCOMA.getSelectedItem().toString());
                         OpenComPort(ComA);
@@ -345,7 +344,6 @@ public class AssistantActivity extends Activity {
                         ShowMessage("串口" + SpinnerCOMB.getSelectedItem().toString() + "已打开");
                         buttonView.setChecked(false);
                     } else {
-//						ComB=new SerialControl("/dev/s3c2410_serial1", "9600");
                         ComB.setPort(SpinnerCOMB.getSelectedItem().toString());
                         ComB.setBaudRate(SpinnerBaudRateCOMB.getSelectedItem().toString());
                         OpenComPort(ComB);
@@ -360,12 +358,6 @@ public class AssistantActivity extends Activity {
 
     //----------------------------------------------------串口控制类
     private class SerialControl extends SerialHelper {
-
-        //		public SerialControl(String sPort, String sBaudRate){
-//			super(sPort, sBaudRate);
-//		}
-        SerialControl() {
-        }
 
         @Override
         protected void onDataReceived(final ComBean ComRecData) {
