@@ -538,6 +538,9 @@ public class AssistantActivity extends Activity {
 
     //----------------------------------------------------串口发送
     private void sendPortData(SerialHelper ComPort, String sOut) {
+        if (sOut.equals("")) {
+            return;
+        }
         if (ComPort != null && ComPort.isOpen()) {
             if (radioButtonTxt.isChecked()) {
                 ComPort.sendTxt(sOut);

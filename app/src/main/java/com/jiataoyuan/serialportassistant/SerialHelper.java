@@ -64,6 +64,7 @@ public abstract class SerialHelper {
     private void send(byte[] bOutArray) {
         try {
             mOutputStream.write(bOutArray);
+            mOutputStream.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,6 +72,8 @@ public abstract class SerialHelper {
 
     //----------------------------------------------------
     void sendHex(String sHex) {
+        sHex = sHex.replace(" ", "");
+        sHex = sHex.toUpperCase();
         byte[] bOutArray = MyFunc.HexToByteArr(sHex);
         send(bOutArray);
     }
